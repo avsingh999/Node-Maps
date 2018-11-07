@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>HTML5 Geolocation Demo</title>
+<title>Find me</title>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkF79ZjAqDLcOgv10ghmPSozj9WMRkXkM&callback=initMap"
     async defer></script></head>
@@ -39,7 +39,7 @@ function show_map(position) {
   var longitude = position.coords.longitude;
   // let's show a map or do something interesting!
   
-  $("#geo-wrapper").css({'width':'640px','height':'480px'});
+  $("#geo-wrapper").css({'width':'1000px','height':'480px'});
   
   var latlng = new google.maps.LatLng( <%= lat %>, <%= lng %>);
   var myOptions = {
@@ -57,9 +57,8 @@ function show_map(position) {
   // To add the marker to the map, call setMap();
   marker.setMap(map);
   
-  $("#msg").text('Your browser thinks you are here:');
-  $("#lat").text('Latitude: ' + <%= lng %>);
-  $("#long").text('Longitude: ' + <%= lat %>);
+  $("#lat").text('Latitude: ' + <%= lat %>);
+  $("#long").text('Longitude: ' + <%= lng %>);
 }
 
 function handle_error(err) {
@@ -71,6 +70,6 @@ function handle_error(err) {
 
 get_location();
 </script>
-
+<a href="/">back</a>
 </body>
 </html>
