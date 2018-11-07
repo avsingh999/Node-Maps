@@ -1,13 +1,20 @@
 # Node-Maps
 show location on google map
 
-# Install
+#### Imgage 1
+<img src="https://github.com/avsingh999/Node-Maps/blob/master/snap1.png" />
+
+#### Image 2
+<img src="https://github.com/avsingh999/Node-Maps/blob/master/snap3.png" />
+
+
+## Install
 
 ```
 npm install
 ```
 
-# Run 
+## Run 
 
 ```
 npm run dev
